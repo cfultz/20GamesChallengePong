@@ -1,5 +1,8 @@
 # 20 Games Challenge: Pong
 
+[!](https://raw.githubusercontent.com/cfultz/20GamesChallengePong/main/assets/splash.png)
+
+
 This is my first attempt at making a game on my own. I made all of the sprites by hand and coded it all the same. Hopefully it will work as expected.
 
 
