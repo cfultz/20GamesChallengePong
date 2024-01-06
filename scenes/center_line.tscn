@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://j8n7lxerx3ff"]
+
+[ext_resource type="Texture2D" uid="uid://fvuynfws80mf" path="res://assets/centerline.png" id="1_d4xw6"]
+
+[node name="Center line" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+scale = Vector2(0.05, 0.9)
+texture = ExtResource("1_d4xw6")
