@@ -1,11 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://cn1hvorne8hod"]
+[gd_scene load_steps=4 format=3 uid="uid://cn1hvorne8hod"]
 
 [ext_resource type="Texture2D" uid="uid://ddwb0ui423rw0" path="res://assets/paddle.png" id="1_22tgf"]
+
+[sub_resource type="GDScript" id="GDScript_negde"]
+script/source = "extends RigidBody2D
+
+@export var speed = 500
+
+func _physics_process(delta):
+	var movement = Vector2.ZERO
+	if Input.is_action_pressed(\"up_p2\"):
+		movement = Vector2.UP
+	elif Input.is_action_pressed(\"down_p2\"):
+		movement = Vector2.DOWN
+		
+	linear_velocity = movement * speed
+
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8p717"]
 size = Vector2(4, 52)
 
-[node name="Player 2 Paddle" type="CharacterBody2D"]
+[node name="Player 2 Paddle" type="RigidBody2D"]
+gravity_scale = 0.0
+lock_rotation = true
+script = SubResource("GDScript_negde")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(590, 175)
