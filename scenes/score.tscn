@@ -1,20 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cv88q5msxfsd0"]
+[gd_scene load_steps=3 format=3 uid="uid://cv88q5msxfsd0"]
 
 [ext_resource type="Script" path="res://scripts/score.gd" id="1_vpi72"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mxm30"]
 size = Vector2(20, 329)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ttgy0"]
-size = Vector2(20, 329)
-
 [node name="Score" type="Area2D"]
 script = ExtResource("1_vpi72")
 
-[node name="Player1Goal" type="CollisionShape2D" parent="." groups=["Ball"]]
+[node name="Edge" type="CollisionShape2D" parent="." groups=["Ball"]]
 position = Vector2(10, 180)
 shape = SubResource("RectangleShape2D_mxm30")
 
-[node name="Player2Goal" type="CollisionShape2D" parent="." groups=["Ball"]]
-position = Vector2(630, 180)
-shape = SubResource("RectangleShape2D_ttgy0")
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
