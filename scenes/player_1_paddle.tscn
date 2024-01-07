@@ -9,6 +9,8 @@ size = Vector2(4, 52)
 [node name="Player 1 Paddle" type="RigidBody2D"]
 gravity_scale = 0.0
 lock_rotation = true
+max_contacts_reported = 1
+contact_monitor = true
 script = ExtResource("1_7ebw0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -19,3 +21,5 @@ shape = SubResource("RectangleShape2D_6bhqv")
 position = Vector2(50, 175)
 scale = Vector2(0.05, 0.1)
 texture = ExtResource("1_538jm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
