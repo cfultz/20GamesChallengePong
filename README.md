@@ -11,7 +11,7 @@ This is my first attempt at making a game on my own. I made all of the sprites b
 * [Aseprite (Steam Version)](https://github.com/aseprite/aseprite)
 
 ## Font Used for UI
-* [Kenney Pixel Square](https://www.kenney.nl/assets/kenney-fonts) - Released under [Create Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+* [Kenney Pixel Square](https://www.kenney.nl/assets/kenney-fonts) - Released under [Creative Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/)
 
 ## Controls
 
