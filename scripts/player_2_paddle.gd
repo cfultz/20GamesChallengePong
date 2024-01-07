@@ -6,7 +6,7 @@ extends RigidBody2D
 
 func _physics_process(delta):
 		human_player()
-
+# Setup to implement AI player
 func human_player():
 	var movement = Vector2.ZERO
 	if Input.is_action_pressed("up_p2"):

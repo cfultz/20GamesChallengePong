@@ -6,13 +6,16 @@ var player2_points = 0
 @onready var player1_paddle = $"Player 1 Paddle"
 @onready var player2_paddle = $"Player 2 Paddle"
 @onready var ball = $Ball as Ball
+@onready var ui = $Ui as UI
 
 func _on_playe1_scored():
 	player1_points += 1
+	ui.update_player1_points(player1_points)
 	reset_game_state()
 	
 func _on_player2_scored():
 	player2_points += 1
+	ui.update_player2_points(player2_points)
 	reset_game_state()
 
 func reset_game_state():

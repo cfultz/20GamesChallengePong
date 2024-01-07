@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d17whemj043ju"]
+[gd_scene load_steps=9 format=3 uid="uid://d17whemj043ju"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_8yfsf"]
 [ext_resource type="PackedScene" uid="uid://cawxkjr0crfs5" path="res://scenes/ceiling.tscn" id="1_duuc4"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cgpf0x261w2mr" path="res://scenes/ball.tscn" id="3_tp63j"]
 [ext_resource type="PackedScene" uid="uid://cgq1tygeuadx6" path="res://scenes/player_1_paddle.tscn" id="4_a8liq"]
 [ext_resource type="PackedScene" uid="uid://cn1hvorne8hod" path="res://scenes/player_2_paddle.tscn" id="5_38ji0"]
+[ext_resource type="PackedScene" uid="uid://rflk4bxrj0u6" path="res://scenes/UI.tscn" id="8_mjkoc"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_8yfsf")
@@ -29,6 +30,8 @@ position = Vector2(0, 345)
 ball = NodePath("../Ball")
 
 [node name="Ball" parent="." instance=ExtResource("3_tp63j")]
+
+[node name="Ui" parent="." instance=ExtResource("8_mjkoc")]
 
 [connection signal="point_scored" from="Player 1 Edge" to="." method="_on_playe1_scored"]
 [connection signal="point_scored" from="Player 2 Edge" to="." method="_on_player2_scored"]
