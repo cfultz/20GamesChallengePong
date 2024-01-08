@@ -35,3 +35,5 @@ Player Two
 ## License
 
 This code and assets are released under the [Creative Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/) License.
+
+![Static Badge](https://img.shields.io/badge/Godot-4.x-blue)
